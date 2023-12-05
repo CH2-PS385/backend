@@ -17,6 +17,12 @@ app.get('/v0/test', async (req, res) => {
     res.send(foodsId);
 });
 
+app.post('/v0/testjson', async (req, res) => {
+    const json = req.body;
+    const test = {status:"test",json:json};
+    res.send(test);
+});
+
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
