@@ -1,5 +1,5 @@
 import express from 'express'
-import * as ml from './tensorflow/main.js';
+import * as ml from './ml/main.js';
 import 'dotenv/config'
 
 const PORT = parseInt(process.env.PORT) || 8080;

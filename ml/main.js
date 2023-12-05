@@ -5,7 +5,7 @@ import csvParser from 'csv-parser';
 import 'dotenv/config'
 
 const models_path = process.env.URL_TFMODELJSON;
-const foodData_path = './tensorflow/dataset_final.csv';
+const foodData_path = './ml/dataset_final.csv';
 
 const foods = [];
 
