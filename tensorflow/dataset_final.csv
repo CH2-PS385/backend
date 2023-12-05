@@ -1,0 +1,152 @@
+food_id,nama_makanan,sumber,tipe,jenis_olahan,fast_food,kalori,protein,lemak,karbohidrat,daging_kerbau,beras,biji_bijian,buah,daging_ayam,daging_babi,daging_kambing,daging_sapi,ikan,kedelai,sayur,susu,telur_ayam,tepung,umbi_umbian
+1,Bakso,Daging Sapi,Makanan Berat,Rebus,Ya,202,12.41,13.16,7.58,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+2,Bubur Ayam,"Beras, Daging Ayam",Makanan Berat,Rebus,Ya,155,11.48,5.16,15.05,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+3,Mi Goreng,Tepung,Makanan Berat,Rebus,Ya,475,10,15,65,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+4,Sate,"Daging Ayam, Daging Kambing",Makanan Berat,Bakar,Tidak,225,19.54,14.82,4.87,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+5,Soto,"Daging Ayam, Daging Sapi",Makanan Berat,Rebus,Tidak,130,9.96,6.19,8.11,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+6,Sop buntut,Daging Sapi,Makanan Berat,Rebus,Tidak,71,7.5,3.6,2.2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+7,Sop daging sapi,Daging Sapi,Makanan Berat,Rebus,Tidak,49,5.8,0.5,5.3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+8,Sop kaki sapi,Daging Sapi,Makanan Berat,Rebus,Tidak,68,9,1.9,3.7,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+9,Sop kambing,Daging Kambing,Makanan Berat,Rebus,Tidak,34,5.5,0.8,1.1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+10,Sop konro,Daging Sapi,Makanan Berat,Rebus,Tidak,71,7.4,2.6,4.5,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+11,Sop saudara,Daging Sapi,Makanan Berat,Rebus,Tidak,89,7.2,5,3.9,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+12,Soto bandung,Daging Sapi,Makanan Berat,Rebus,Tidak,42,3.9,1.7,2.8,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+13,Soto banjar,Daging Ayam,Makanan Berat,Rebus,Tidak,110,2.9,9.5,3.2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+14,Soto betawi,Daging Sapi,Makanan Berat,Rebus,Tidak,135,2.5,8.8,11.5,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+15,Soto jeroan,Daging Sapi,Makanan Berat,Rebus,Tidak,92,11.8,4.3,1.4,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+16,Soto kudus,"Daging Ayam, Daging Kerbau",Makanan Berat,Rebus,Tidak,38,2.6,2.3,1.8,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+17,Soto madura,Daging Sapi,Makanan Berat,Rebus,Tidak,60,3.5,4.5,1.3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+18,Soto padang,Daging Sapi,Makanan Berat,Rebus,Tidak,127,5.9,6.6,11,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+19,Soto pekalongan,"Daging Sapi, Daging Kerbau, Kedelai",Makanan Berat,Rebus,Tidak,94,3,6.8,5.1,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0
+20,Soto pemalang,Daging Sapi,Makanan Berat,Rebus,Tidak,75,3.6,5.2,3.5,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+21,Soto sukaraja,Daging Sapi,Makanan Berat,Rebus,Tidak,80,3.2,3.5,9,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+22,Soto sulung,Daging Sapi,Makanan Berat,Rebus,Tidak,86,2.3,8.5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+23,Kembang tahu,Kedelai,Makanan Berat,Mentah,Ya,380,48.9,13.8,23.3,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+24,Kembang tahu rebus,Kedelai,Makanan Berat,Rebus,Ya,90,10.7,4,4.7,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+25,Keripik oncom,Kedelai,Makanan Ringan,Goreng,Ya,598,8.3,43.8,42.6,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+26,Keripik tempe,Kedelai,Makanan Ringan,Goreng,Ya,581,12.1,40.6,41.7,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+27,Kwaci,Biji-bijian,Makanan Ringan,Panggang,Ya,515,30.6,42.1,13.8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+28,Tauco,Kedelai,Makanan Berat,Mentah,Tidak,184,11.4,5.5,22.2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+29,Wingko babat,Tepung,Makanan Ringan,Panggang,Tidak,355,3.2,15.1,51.4,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+30,Ledre pisang,Buah,Makanan Ringan,Panggang,Tidak,405,4.8,5.1,84.9,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+31,Lempog durian,Buah,Makanan Ringan,Rebus,Tidak,320,3.5,5.7,63.7,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+32,Loka anjoroi,Buah,Makanan Berat,Rebus,Tidak,163,1.1,4.3,30,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+33,Alpukat,Buah,Makanan Ringan,Mentah,Ya,85,0.9,6.5,7.7,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+34,Rujak aceh,Buah,Makanan Berat,Rebus,Tidak,82,0.4,0.3,19.7,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+35,Sale kesemek,Buah,Makanan Ringan,Panggang,Tidak,296,1.1,0.6,71.4,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+36,Sale pisang siam,Buah,Makanan Ringan,Panggang,Tidak,281,2.4,0.7,66.1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+37,Anggur hutan,Buah,Makanan Ringan,Mentah,Ya,30,0.5,0.2,6.8,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+38,Sanggara belanda,Buah,Makanan Ringan,Goreng,Tidak,242,6.4,7.1,38.2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+39,Ketoprak,Beras,Makanan Berat,Rebus,Tidak,153,7.9,7.7,13,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+40,Ketupat kandangan,"Beras, Ikan",Makanan Berat,Rebus,Tidak,109,2.2,5.2,13.4,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+41,Kue ali,Tepung,Makanan Ringan,Goreng,Tidak,440,3.8,18.5,64.5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+42,Lapis legit,Tepung,Makanan Ringan,Kukus,Tidak,389,6.6,15.7,55.5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+43,Kue gelang,Tepung,Makanan Ringan,Goreng,Tidak,448,5.8,16.1,70,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+44,Kue Jahe,Tepung,Makanan Ringan,Panggang,Tidak,425,1.6,8.8,84.6,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+45,Kue Kelapa,Buah,Makanan Ringan,Panggang,Tidak,591,5.6,42.1,47.5,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+46,Wortel Rebus,Sayur,Makanan Ringan,Rebus,Ya,28,0.7,0.5,6.3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+47,Wortel Kukus,Sayur,Makanan Ringan,Kukus,Ya,37,1,0.6,8.3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+48,Asinan Bogor,Sayur,Makanan Ringan,Mentah,Tidak,98,3.9,2.6,14.8,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+49,Sayur Anyang,Sayur,Makanan Berat,Rebus,Tidak,126,3.4,7.9,10.3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+50,Sayu Ares,Sayur,Makanan Berat,Rebus,Tidak,113,0.9,7.2,11.2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+51,Rawon,Daging Sapi,Makanan Berat,Rebus,Tidak,60,5.4,2.5,4,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+52,Rendang sapi,Daging Sapi,Makanan Berat,Gulai,Tidak,193,22.6,7.9,7.8,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+53,Ayam goreng kalasan,Daging Ayam,Makanan Berat,Goreng,Tidak,275,37.4,12.2,1.3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+54,Babi hutan masak rica,Daging Babi,Makanan Berat,Goreng,Tidak,491,24.6,16.3,0.2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+55,Beef burger,"Daging Sapi, Daging Ayam",Makanan Berat,Panggang,Ya,258,10.6,9.5,32.5,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+56,Beef teriyaki,"Daging Sapi, Daging Ayam",Makanan Berat,Panggang,Ya,151,8.6,3.1,22.3,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+57,Beef yakiniku,"Daging Sapi, Daging Ayam",Makanan Berat,Panggang,Ya,132,9.8,1.1,20.7,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+58,Sapi abon,Daging Sapi,Makanan Berat,Goreng,Tidak,212,18,10.6,59.3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+59,"Sapi, abon, asli",Daging Sapi,Makanan Berat,Goreng,Tidak,358,14.6,16.1,38.6,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+60,Daging sapi asap,Daging Sapi,Makanan Berat,Asap,Tidak,182,32,6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+61,Dendeng sapi mentah,Daging Sapi,Makanan Berat,Mentah,Tidak,301,55,9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+62,Daging sapi kornet,Daging Sapi,Makanan Berat,Rebus,Ya,289,16,25,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+63,Sosis sapi,Daging Sapi,Makanan Berat,Rebus,Ya,448,14.5,42.3,2.3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+64,Sosis hati sapi,Daging Sapi,Makanan Berat,Rebus,Ya,274,16,22,3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+65,Ampela ayam goreng,Daging Ayam,Makanan Berat,Goreng,Ya,270,32.3,11.2,9.9,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+66,Usus ayam goreng,Daging Ayam,Makanan Berat,Goreng,Ya,473,45.2,26.3,13.9,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+67,Belut goreng,Ikan,Makanan Berat,Goreng,Tidak,417,25.9,19.4,32,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+68,Cumi-cumi goreng,Ikan,Makanan Berat,Goreng,Tidak,265,40.6,10.1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+69,Ikan asin kering,Ikan,Makanan Berat,Mentah,Tidak,193,42,1.5,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+70,Ikan bandeng presto,Ikan,Makanan Berat,Presto,Tidak,296,17.1,20.3,11.3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+71,Ikan Mas pepes,Ikan,Makanan Berat,Kukus,Tidak,209,15.2,11.3,11.8,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+72,Ikan mujahir goreng,Ikan,Makanan Berat,Goreng,Tidak,416,46.9,23.9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+73,Ikan Mujahir pepes,Ikan,Makanan Berat,Kukus,Tidak,121,21.7,2.8,0.8,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+74,Ikan Patin bakar,Ikan,Makanan Berat,Bakar,Tidak,144,17.5,6.3,4.3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+75,Pempek telur,"Ikan, Telur",Makanan Berat,Goreng,Ya,156,4.7,2.7,28.3,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+76,Teri balado,Ikan,Makanan Berat,Goreng,Tidak,365,23.7,22.3,17.5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+77,Gulai tiram,Ikan,Makanan Berat,Gulai,Tidak,132,9,7.2,7.8,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+78,Gurame asem manis,Ikan,Makanan Berat,Goreng,Tidak,192,12.7,10.1,12.7,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+79,Ikan asar merah,Ikan,Makanan Berat,Panggang,Tidak,146,17.7,5.9,5.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+80,Saboko gurita,Ikan,Makanan Berat,Panggang,Tidak,87,15.7,1.5,2.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+81,Saboko saltan,Ikan,Makanan Berat,Panggang,Tidak,113,17.1,3.6,3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+82,Saboko sardin,Ikan,Makanan Berat,Panggang,Tidak,110,12.9,4.3,4.9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+83,Gulai asam keueung,Ikan,Makanan Berat,Gulai,Tidak,52,10,0.5,1.8,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+84,Gulai keumamah,Ikan,Makanan Berat,Gulai,Tidak,110,5.9,8.2,3.2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+85,Biskuit,Tepung,Makanan Ringan,Panggang,Ya,458,6.9,14.4,75.1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+86,Bakpia,Tepung,Makanan Ringan,Panggang,Tidak,272,8.7,6.7,44.1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+87,Bakwan,Tepung,Makanan Ringan,Goreng,Ya,280,8.2,10.2,39,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+88,Dodol bali,Beras,Makanan Ringan,Rebus,Tidak,298,3.7,2.1,65.9,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+89,Dodol galamai,Beras,Makanan Ringan,Rebus,Tidak,348,0.4,3.8,76.1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+90,Dodol kedondong,Beras,Makanan Ringan,Rebus,Tidak,331,1.9,7.6,63.8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+91,Dodol manado,Beras,Makanan Ringan,Rebus,Tidak,373,4.3,16.5,51.9,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+92,Roti putih,Tepung,Makanan Berat,Panggang,Ya,248,8,1.2,50,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+93,Apel,Buah,Makanan Ringan,Mentah,Tidak,58,0.3,0.4,14.9,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+94,Semangka,Buah,Makanan Ringan,Mentah,Tidak,28,0.5,0.2,6.9,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+95,Belimbing,Buah,Makanan Ringan,Mentah,Tidak,36,0.4,0.4,8.8,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+96,Telur mata sapi,Telur Ayam,Makanan Berat,Goreng,Ya,240,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+97,Ayam Goreng,Daging Ayam,Makanan Berat,Goreng,Tidak,275,37.4,12.4,1.3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+98,Ikan Lele Goreng,Ikan,Makanan Berat,Goreng,Tidak,372,7.8,36.3,3.5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+99,Nasi,Beras,Makanan Berat,Kukus,Ya,180,3,0.3,39.8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+100,Telur dadar,Telur Ayam,Makanan Berat,Goreng,Ya,251,16.3,19.4,1.4,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+101,"Tempe kedelai murni, goreng",Kedelai,Makanan Ringan,Goreng,Ya,350,24.5,26.6,10.4,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+102,"Ikan Papuyu, Bakar",Ikan,Makanan Berat,Bakar,Tidak,152,17.6,6.1,6.7,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+103,"Mujahir Acar Kuning, Masakan",Ikan,Makanan Berat,Tumis,Tidak,330,17.8,23.4,12.1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+104,"Pindang Kenari, Masakan",Ikan,Makanan Berat,Rebus,Tidak,124,9.5,9.6,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+105,"Pencok Lele, Masakan",Ikan,Makanan Berat,Goreng,Tidak,372,7.8,36.3,3.5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+106,Sate Bandeng,Ikan,Makanan Berat,Bakar,Tidak,283,12.1,16.8,20.9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+107,Tekwan,Ikan,Makanan Berat,Rebus,Tidak,53,1.9,0.9,9.4,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+108,Gado0Gado,Sayur,Makanan Ringan,Kukus,Tidak,137,6.1,3.2,21,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+109,"Gudeg, Sayur",Sayur,Makanan Ringan,Kukus,Tidak,160,3.3,9.2,16,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+110,"Cap Cai, Sayur",Sayur,Makanan Ringan,Rebus,Tidak,97,5.8,6.3,4.2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+111,Rujak Cingur,"Buah, Sayur",Makanan Ringan,Mentah,Tidak,153,11.3,8.4,8,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0
+112,"Ikan Sanggang, masakan",Ikan,Makanan Berat,Goreng,Tidak,240,21.7,7.7,20.7,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+113,"Dendeng Mujahir, Goreng",Ikan,Makanan Berat,Goreng,Tidak,598,74.3,26.9,9.2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+114,"Dendeng Belut, Goreng",Ikan,Makanan Berat,Goreng,Tidak,382,55.7,14.1,8,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+115,Fillet O-Fish,Ikan,Makanan Berat,Goreng,Tidak,270,12.3,15.9,19.3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+116,Sardines dalam kaleng,Ikan,Makanan Berat,Tumis,Ya,338,21.1,27,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+117,"Gulai Ikan Paya, Masakan",Ikan,Makanan Ringan,Tumis,Tidak,148,10,9.8,5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+118,Es Krim,Susu,Makanan Berat,Beku,Ya,210,4,12.5,20.6,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+119,"Ayam Taliwang, Masakan",Daging Ayam,Makanan Berat,Goreng,Tidak,264,18.2,20.1,2.7,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+120,Gulai Kambing,Daging Kambing,Makanan Berat,Tumis,Tidak,126,4.2,9.4,6.2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+121,"Kelapa Muda Daging, Segar",Buah,Makanan Ringan,Mentah,Tidak,68,1,0.9,14,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+122,"Kedondong, Segar",Buah,Makanan Ringan,Mentah,Tidak,47,0.5,0.2,10.4,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+123,"Langsat, Segar",Buah,Makanan Ringan,Mentah,Tidak,56,0.9,0.2,14.3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+124,"Lemon ,Segar",Buah,Makanan Ringan,Mentah,Tidak,34,0.5,0.8,6.2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+125,"Mangga, Segar",Buah,Makanan Ringan,Mentah,Tidak,52,0.7,0,12.3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+126,"Manggis, Segar",Buah,Makanan Ringan,Mentah,Tidak,63,0.6,0.6,15.6,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+127,"Markisa, Segar",Buah,Makanan Ringan,Mentah,Tidak,144,3.5,1.2,29.8,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+128,"Melon, Segar",Buah,Makanan Ringan,Mentah,Tidak,37,0.6,0.4,7.8,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+129,"Nanas, Segar",Buah,Makanan Ringan,Mentah,Tidak,40,0.6,0.3,9.9,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+130,Jambu Biji,Buah,Makanan Ringan,Mentah,Tidak,49,0.9,0.3,12.2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+131,Jeruk Bali,Buah,Makanan Ringan,Mentah,Tidak,48,0.6,0.2,12.4,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+132,"Pepaya, Segar",Buah,Makanan Ringan,Mentah,Tidak,46,0.5,12,12.2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+133,Pisang Ambon,Buah,Makanan Ringan,Mentah,Tidak,108,1,0.8,24.3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+134,Rambutan Segar,Buah,Makanan Ringan,Mentah,Tidak,69,0.9,0.1,18.1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+135,Salak,Buah,Makanan Ringan,Mentah,Tidak,77,0.4,0,20.9,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+136,"Sirsak, Segar",Buah,Makanan Ringan,Mentah,Tidak,65,1,0.3,16.3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+137,"Srikaya, Segar",Buah,Makanan Ringan,Mentah,Tidak,63,1.1,0.5,13.9,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+138,"Durian, Segar",Buah,Makanan Ringan,Mentah,Tidak,134,2.5,3,28,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+139,Cempedak Segar,Buah,Makanan Ringan,Mentah,Tidak,116,3,0.4,28.6,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+140,"Buah Naga Merah, Segar",Buah,Makanan Ringan,Mentah,Tidak,71,1.7,3.1,9.1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+141,"Duku, Segar",Buah,Makanan Ringan,Mentah,Tidak,63,1,0.2,16.1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+142,"Kesemek, Segar",Buah,Makanan Ringan,Mentah,Tidak,78,0.8,0.4,20,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+143,"Blewah, Segar",Buah,Makanan Ringan,Mentah,Tidak,34,0.8,0.2,8.2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+144,Bihun Goreng Instan,Tepung,Makanan Berat,Goreng,Ya,381,6.1,3.9,80.3,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+145,Bika Ambon,Tepung,Makanan Ringan,Kukus,Tidak,199,2.1,1.5,44.4,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+146,"Kelepon, Kue",Tepung,Makanan Ringan,Kukus,Tidak,215,3.7,3.7,41.8,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+147,Kue Sus,Tepung,Makanan Ringan,Kukus,Tidak,221,7.5,10.2,24.8,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+148,Martabak Mesir,"Tepung, Telur, Daging Ayam, Daging Sapi",Makanan Berat,Goreng,Tidak,278,5.1,8.6,45,0,0,0,0,1,0,0,1,0,0,0,0,1,1,0
+149,Mie Aceh Rebus,"Tepung, Telur, Daging Ayam",Makanan Berat,Rebus,Tidak,113,3,3.2,18.1,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0
+150,Mie Pangsit Basah,"Tepung, Telur, Daging Ayam",Makanan Berat,Rebus,Tidak,105,5.9,4.9,9.4,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0
+151,Singkong Goreng,Umbi-umbian,Makanan Ringan,Goreng,Tidak,202,1.38,7.91,31.85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
