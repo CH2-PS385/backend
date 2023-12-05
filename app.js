@@ -45,6 +45,24 @@ app.get('/v1/getallergenbyid', async(req, res) => {
     return res.status(200).send({success: true, data: allergen});
 });
 
+app.post('/v1/recommend', async (req, res) => {
+    const calories = null ?? req.body.calories;
+    let allergies = null ?? req.body.allergies;
+    
+    
+    if (!calories && !allergies) return res.status(400).send({success: false, message:'Missing parameter: calories, allergies[]'});
+    if (!calories) return res.status(400).send({success: false, message:'Missing parameter: calories'});
+    if (!allergies) return res.status(400).send({success: false, message:'Missing parameter: allergies'});
+
+    allergies = allergies.map((val) => _.isInteger(val) ? data.getAllergenbyId(val)[0]?.allergen_name : val);
+    const invalidAllergies = allergies.findIndex((val) =>  _.isNull(val) || _.isUndefined(val));
+    if(invalidAllergies >= 0) return res.status(400).send({success: false, message:`Invalid Allergen: one or more allergen by id is not valid`});
+
+    const food_recommendation = await ml.recommendation(calories, allergies);
+     console.log(food_recommendation);
+    return res.status(200).send({success: true, data: food_recommendation.slice(0,4).map((val) =>({...data.getFoodbyId(val)[0]}))});
+});
+
 app.get('/v1/getallallergen', async(req, res) => {
     return res.status(200).send({success: true, data: data.getAllAllergen()})
 });

@@ -8,7 +8,7 @@ const foodData_path = './ml/dataset_final.csv';
 const foods = [];
 const allergens = [];
 
-fs.createReadStream(foodData_path)
+await fs.createReadStream(foodData_path)
     .pipe(csvParser())
     .on('headers', (headers) => {
         headers
