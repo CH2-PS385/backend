@@ -3,6 +3,7 @@ import fs from 'fs';
 import csvParser from 'csv-parser';
 import _ from 'lodash';
 
+
 const foodData_path = './ml/dataset_final.csv';
 
 const foods = [];
@@ -46,7 +47,7 @@ export const getAllergenbyId = function (id) {
 export const getAllAllergen = function () {
     return allergens;
 }
-// == ML Prediction ==
+// == ML  ==
 // Get the kalori value from the food_id
 export const getCalories = function (id) {
     let calories = parseInt(foods[id - 1].kalori)

@@ -5,6 +5,7 @@ import 'dotenv/config'
 import bodyParser from 'body-parser';
 import _ from 'lodash';
 
+
 const PORT = parseInt(process.env.PORT) || 8080;
 const app = express()
 app.use(bodyParser.json());
@@ -18,6 +19,7 @@ app.get('/v0/test', async (req, res) => {
     const foodsId = await ml.recommendation(1800, ['daging_ayam', 'sayur']);
     res.send(foodsId);
 });
+
 
 app.post('/v0/testjson', async (req, res) => {
     const json = req.body;
@@ -66,7 +68,6 @@ app.post('/v1/recommend', async (req, res) => {
 app.get('/v1/getallallergen', async(req, res) => {
     return res.status(200).send({success: true, data: data.getAllAllergen()})
 });
-
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);

@@ -57,7 +57,7 @@ food_id,nama_makanan,sumber,tipe,jenis_olahan,fast_food,kalori,protein,lemak,kar
 56,Beef teriyaki,"Daging Sapi, Daging Ayam",Makanan Berat,Panggang,Ya,151,8.6,3.1,22.3,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
 57,Beef yakiniku,"Daging Sapi, Daging Ayam",Makanan Berat,Panggang,Ya,132,9.8,1.1,20.7,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
 58,Sapi abon,Daging Sapi,Makanan Berat,Goreng,Tidak,212,18,10.6,59.3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-59,"Sapi, abon, asli",Daging Sapi,Makanan Berat,Goreng,Tidak,358,14.6,16.1,38.6,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+59,"Sapi cincang kecap",Daging Sapi,Makanan Berat,Goreng,Tidak,358,14.6,16.1,38.6,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
 60,Daging sapi asap,Daging Sapi,Makanan Berat,Asap,Tidak,182,32,6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
 61,Dendeng sapi mentah,Daging Sapi,Makanan Berat,Mentah,Tidak,301,55,9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
 62,Daging sapi kornet,Daging Sapi,Makanan Berat,Rebus,Ya,289,16,25,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
@@ -106,7 +106,7 @@ food_id,nama_makanan,sumber,tipe,jenis_olahan,fast_food,kalori,protein,lemak,kar
 105,"Pencok Lele, Masakan",Ikan,Makanan Berat,Goreng,Tidak,372,7.8,36.3,3.5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 106,Sate Bandeng,Ikan,Makanan Berat,Bakar,Tidak,283,12.1,16.8,20.9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 107,Tekwan,Ikan,Makanan Berat,Rebus,Tidak,53,1.9,0.9,9.4,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
-108,Gado0Gado,Sayur,Makanan Ringan,Kukus,Tidak,137,6.1,3.2,21,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+108,Gado Gado,Sayur,Makanan Ringan,Kukus,Tidak,137,6.1,3.2,21,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
 109,"Gudeg, Sayur",Sayur,Makanan Ringan,Kukus,Tidak,160,3.3,9.2,16,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
 110,"Cap Cai, Sayur",Sayur,Makanan Ringan,Rebus,Tidak,97,5.8,6.3,4.2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
 111,Rujak Cingur,"Buah, Sayur",Makanan Ringan,Mentah,Tidak,153,11.3,8.4,8,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0
