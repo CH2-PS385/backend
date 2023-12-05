@@ -16,6 +16,10 @@ export const getFoodbyId = function (id) {
     return foods.filter((val) => val.food_id == id);
 }
 
+export const getAllFood = function () {
+    return foods;
+}
+
 // Get the kalori value from the food_id
 export const getCalories = function (id) {
     let calories = parseInt(foods[id - 1].kalori)
