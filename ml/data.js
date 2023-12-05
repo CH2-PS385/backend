@@ -21,7 +21,13 @@ await fs.createReadStream(foodData_path)
             }
         ));
     })
-    .on('data', (data) => foods.push(data))
+    .on('data', (data) => {
+        // Clean the name 
+        let cleanName = data.nama_makanan.split(',')[0];
+        cleanName = _.startCase(cleanName);
+        data = {...data, nama_makanan_clean:cleanName}
+        foods.push(data);
+    })
     .on('end', () => {
     });
 
