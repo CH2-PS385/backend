@@ -1,9 +1,11 @@
 import express from 'express'
 import * as ml from './ml/main.js';
 import 'dotenv/config'
+import bodyParser from 'body-parser';
 
 const PORT = parseInt(process.env.PORT) || 8080;
 const app = express()
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     res.send(["Hello", "World!"]);
