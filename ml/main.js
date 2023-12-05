@@ -1,39 +1,9 @@
 // TensorflowJS
 import * as tf from '@tensorflow/tfjs';
-import fs from 'fs';
-import csvParser from 'csv-parser';
 import 'dotenv/config'
+import * as data from './data.js';
 
 const models_path = process.env.URL_TFMODELJSON;
-const foodData_path = './ml/dataset_final.csv';
-
-const foods = [];
-
-fs.createReadStream(foodData_path)
-    .pipe(csvParser())
-    .on('data', (data) => foods.push(data))
-    .on('end', () => {
-    });
-
-export const getFoodbyId = function (id) {
-    return foods.filter((val) => val.food_id == id);
-}
-
-// Get the kalori value from the food_id
-export const getCalories = function (id) {
-    let calories = parseInt(foods[id - 1].kalori)
-    return calories;
-}
-
-// Check each allergies value from the food_id
-export const getAllergies = function (id, allergy) {
-    return foods[id - 1][allergy];
-}
-
-// Get the tipe value from the food_id
-export const getTypeFood = function (id) {
-    return foods[id - 1].tipe;
-}
 
 export async function recommendation(userCalories, allergies) {
     // Load model
@@ -67,7 +37,7 @@ export async function recommendation(userCalories, allergies) {
     if (allergies.length > 0) {
         for (const allergy of allergies) {
             for (const food of recommendedFoodIds) {
-                if (getAllergies(food, allergy) == 1) {
+                if (data.getAllergies(food, allergy) == 1) {
                     recommendedFoodIds.splice(recommendedFoodIds.indexOf(food), 1);
                 }
             }
@@ -79,7 +49,7 @@ export async function recommendation(userCalories, allergies) {
 
     // Split recommendedFoodIds into 2 arrays: nonSnackIds and snackIds
     for (const food of recommendedFoodIds) {
-        if (getTypeFood(food) == 'Makanan Berat') {
+        if (data.getTypeFood(food) == 'Makanan Berat') {
             nonSnackIds.push(food);
         }
         else {
@@ -96,7 +66,7 @@ export async function recommendation(userCalories, allergies) {
         for (let j = i + 1; j < nonSnackIds.length - 1; j++) {
             for (let k = j + 1; k < nonSnackIds.length; k++) {
                 for (let l = 0; l < snackIds.length; l++) {
-                    temp = getCalories(nonSnackIds[i]) + getCalories(nonSnackIds[j]) + getCalories(nonSnackIds[k]) + getCalories(snackIds[l]);
+                    temp = data.getCalories(nonSnackIds[i]) + data.getCalories(nonSnackIds[j]) + data.getCalories(nonSnackIds[k]) + data.getCalories(snackIds[l]);
                     if (temp <= userCalories) {
                         comb_4.push([nonSnackIds[i], nonSnackIds[j], nonSnackIds[k], snackIds[l], temp]);
                     }
