@@ -37,6 +37,18 @@ app.get('/v1/getallfood', async(req, res) => {
     return res.status(200).send({success: true, data: data.getAllFood()})
 });
 
+app.get('/v1/getallergenbyid', async(req, res) => {
+    const id =  null ?? req.query.id;
+    if (!id) return res.status(400).send({success: false, message:'Missing parameter: id'});
+    const allergen = {...data.getAllergenbyId(id)[0]};
+    if(_.isEmpty(allergen)) return res.status(404).send({success: false, message:'Allergen not found'});
+    return res.status(200).send({success: true, data: allergen});
+});
+
+app.get('/v1/getallallergen', async(req, res) => {
+    return res.status(200).send({success: true, data: data.getAllAllergen()})
+});
+
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
