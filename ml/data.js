@@ -2,6 +2,7 @@ import 'dotenv/config';
 import fs from 'fs';
 import csvParser from 'csv-parser';
 import _ from 'lodash';
+import {images_list, images_get_public_url} from '../cloudstorage/main.js';
 
 
 const foodData_path = './ml/dataset_final.csv';
@@ -9,6 +10,7 @@ const foodData_path = './ml/dataset_final.csv';
 const foods = [];
 const allergens = [];
 
+await images_list();
 await fs.createReadStream(foodData_path)
     .pipe(csvParser())
     .on('headers', (headers) => {
@@ -30,6 +32,9 @@ await fs.createReadStream(foodData_path)
         foods.push(data);
     })
     .on('end', () => {
+        foods.forEach((val, index) =>{
+            val['image_url'] = images_get_public_url(index);
+        })
     });
 
 export const getFoodbyId = function (id) {
