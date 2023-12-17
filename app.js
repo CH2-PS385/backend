@@ -4,6 +4,7 @@ import * as data from './ml/data.js';
 import 'dotenv/config'
 import bodyParser from 'body-parser';
 import _ from 'lodash';
+import * as db_user from './firestore/user.js';
 
 
 const PORT = parseInt(process.env.PORT) || 8080;
@@ -67,6 +68,114 @@ app.post('/v1/recommend', async (req, res) => {
 
 app.get('/v1/getallallergen', async(req, res) => {
     return res.status(200).send({success: true, data: data.getAllAllergen()})
+});
+
+// use of db
+app.post('/v1/adduser', async (req,res) => {
+    const email = null ?? req.body.email;
+    const name = req.body.name ?? "Unnamed";
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+
+    const user = await db_user.create_user(email, name);
+    
+    if(user.status=="error") {
+        return res.status(400).send({success: false, message: user.message});
+    } else {
+        return res.status(200).send({success: true, message: user.message});
+    }   
+});
+
+app.get('/v1/getuser', async (req, res) => {
+    const email = null ?? req.query.email;
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+
+    const user = await db_user.get_user(email);
+    
+    if(user.status=="error") {
+        return res.status(400).send({success: false, message: user.message});
+    } else {
+        return res.status(200).send({success: true, message: user.message, data: user.data});
+    }  
+}); 
+
+app.get('/v1/getuserinfo', async (req,res) => {
+    const email = null ?? req.body.email;
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+
+    const user = await db_user.get_userinfo(email);
+    
+    if(user.status=="error") {
+        return res.status(400).send({success: false, message: user.message});
+    } else {
+        return res.status(200).send({success: true, message: user.message});
+    }   
+});
+
+app.post('/v1/updateuserinfo', async (req,res) => {
+    const message = [];
+    const email = null ?? req.body.email;
+    const height = null ?? req.body.height;
+    const weight = null ?? req.body.weight;
+    const age = null ?? req.body.age;
+    const gender = null ?? req.body.gender;
+    if(!email) message.push(`Missing parameter: email`);
+    if(!height) message.push(`Missing parameter: height`);
+    if(!weight) message.push(`Missing parameter: weight`);
+    if(!age) message.push(`Missing parameter: age`);
+    if(!gender) message.push(`Missing parameter: gender`);
+    if(!_.isEmpty(message)) return res.status(400).send({success:false, message: message});
+    const user = await db_user.update_userinfo(email, height, weight, age, gender);
+    
+    if(user.status=="error") {
+        return res.status(400).send({success: false, message: user.message});
+    } else {
+        return res.status(200).send({success: true, message: user.message});
+    }   
+});
+
+app.get('/v1/getuserallergies', async (req,res) => {
+    const email = null ?? req.query.email;
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+
+    const user = await db_user.get_userallergies(email);
+    
+    if(user.status=="error") {
+        return res.status(400).send({success: false, message: user.message});
+    } else {
+        return res.status(200).send({success: true, message: user.message, data: user.data});
+    }   
+});
+
+app.post('/v1/updateuserallergies', async (req,res) => {
+    const message = [];
+    const email = null ?? req.body.email;
+    const allergies = null ?? req.body.allergies;
+    if(!email) message.push(`Missing parameter: email`);
+    if(!allergies || _.isEmpty(allergies)) message.push(`Missing parameter: allergies`);
+    if(!_.isEmpty(message)) return res.status(400).send({success:false, message: message});
+    
+    
+    const user = await db_user.update_userallergies(email, allergies);
+
+    if(user.status=="error") {
+        return res.status(400).send({success: false, message: user.message});
+    } else {
+        return res.status(200).send({success: true, message: user.message});
+    }   
+});
+
+app.post('/v1/adduser', async (req,res) => {
+    const email = null ?? req.body.email;
+    const name = req.body.name ?? "Unnamed";
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+
+    const user = await db_user.create_user(email, name);
+    
+    if(user.status=="error") {
+        return res.status(400).send({success: false, message: user.message});
+    } else {
+        return res.status(200).send({success: true, message: user.message});
+    }   
 });
 
 app.listen(PORT, () => {

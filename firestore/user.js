@@ -31,9 +31,9 @@ export const get_user = async function (email) {
     try {
         const userExist = await findUserbyEmail(email);
         if (userExist) {
-            const user = await userExist.docs[0].data();
+            const user = await userExist.docs[0];
 
-            return { status: "success", message: `Get user with email ${email} success. ID: ${user.id}`, data: user };
+            return { status: "success", message: `Get user with email ${email} success. ID: ${user.id}`, data: user.data() };
         } else {
             return ({ status: "error", message: "User with that email does not exist" });
         }
@@ -58,4 +58,32 @@ export const update_user = async function (email, object) {
     } catch (error) {
         return { status: "error", message: error };
     }
+}
+
+export const get_userinfo = async function (email) {
+    const res = await get_user(email);
+    const user = await res.data;
+    const userinfo = {
+        height: user.height,
+        weight: user.weight,
+        age: user.age, 
+        gender: user.gender
+    };
+
+    return {...res, data: userinfo};
+}
+
+export const update_userinfo = async function (email, height, weight, age, gender) {
+    return await update_user(email, {height, weight, age, gender});
+}
+
+export const get_userallergies = async function (email) {
+    const res = await get_user(email);
+    const user = await res.data;
+
+    return {...res, data: user.allergies};
+}
+
+export const update_userallergies = async function (email, allergies) { // array
+    return update_user(email, {allergies});
 }
