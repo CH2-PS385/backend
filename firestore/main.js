@@ -1,15 +1,14 @@
-const admin = require('firebase-admin');
+import 'dotenv/config';
+import { initializeApp,  cert }  from 'firebase-admin/app';
+import { getFirestore } from 'firebase-admin/firestore';
 
 // Initialize Firebase Admin SDK
-const serviceAccountPath = process.env.SERVICE_ACCOUNT_PATH;
-const serviceAccount = require(serviceAccountPath);
+const serviceAccount = process.env.SERVICE_ACCOUNT_PATH;
 const DATABASE_URL = process.env.DATABASE_URL;
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: DATABASE_URL,
-  });
+initializeApp({
+  databaseURL: DATABASE_URL,
+  credential: cert(serviceAccount)
+});
 
-const db = admin.firestore();
-
-module.exports = db;
+export const db = getFirestore();
