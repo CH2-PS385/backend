@@ -27,6 +27,22 @@ export const create_user = async function (email, name) {
     }
 }
 
+export const get_user = async function (email) {
+    try {
+        const userExist = await findUserbyEmail(email);
+        if (userExist) {
+            const user = await userExist.docs[0].data();
+
+            return { status: "success", message: `Get user with email ${email} success. ID: ${user.id}`, data: user };
+        } else {
+            return ({ status: "error", message: "User with that email does not exist" });
+        }
+
+    } catch (error) {
+        return { status: "error", message: error };
+    }
+}
+
 
 export const update_user = async function (email, object) {
     try {
@@ -40,6 +56,6 @@ export const update_user = async function (email, object) {
             return { status: "error", message: "User with that email does not exist" };
         }
     } catch (error) {
-        return { status: "error", message: 'a'+error };
+        return { status: "error", message: error };
     }
 }
