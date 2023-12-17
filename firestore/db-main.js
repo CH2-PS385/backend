@@ -1,4 +1,4 @@
-const db = require('./firebase'); 
+const db = require('./firestore/main'); 
 
 const usersCollection = db.collection('users');
 const plannerCollection = db.collection('planner');
