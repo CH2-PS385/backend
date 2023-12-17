@@ -26,3 +26,20 @@ export const create_user = async function (email, name) {
         return { status: "error", message: error };
     }
 }
+
+
+export const update_user = async function (email, object) {
+    try {
+        const userExist = await findUserbyEmail(email);
+        
+        if (userExist) {
+            const user = userExist.docs[0].ref;
+            await user.update(object);
+            return { status: "success", message: `Updated user with email ${email}. ID: ${user.id}` };
+        } else {
+            return { status: "error", message: "User with that email does not exist" };
+        }
+    } catch (error) {
+        return { status: "error", message: 'a'+error };
+    }
+}
