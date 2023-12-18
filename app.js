@@ -186,11 +186,18 @@ app.get('/v1/getplanner', async (req,res) => {
 
     const planner = await db_planner.get_planner(email, dd, mm, yy);
     const foodsData = planner?.array?.map((val) =>({...data.getFoodbyId(val)[0]}));
-    // return res.status(400).send({test:"test", data:foodsData, planner:planner});
+
+    const nutritionsum = {
+        calories: _.sum(foodsData.map((f) => parseInt(f.kalori))),
+        protein: _.sum(foodsData.map((f) => parseInt(f.protein))),
+        fat: _.sum(foodsData.map((f) => parseInt(f.lemak))),
+        carbs: _.sum(foodsData.map((f) => parseInt(f.karbohidrat)))
+    };
+
     if(planner.status=="error") {
         return res.status(400).send({success: false, isEmpty: true, message: planner.message});
     } else {
-        return res.status(200).send({success: true, message: planner.message, isEmpty: planner.isEmpty, data: foodsData});
+        return res.status(200).send({success: true, message: planner.message, isEmpty: planner.isEmpty, nutrition: nutritionsum, data: foodsData});
     }  
 });
 
@@ -207,11 +214,17 @@ app.post('/v1/setplanner', async (req,res) => {
 
     const foodsData = rec.map((val) =>({...data.getFoodbyId(val)[0]}));
     const ret = await db_planner.set_planner(email, dd, mm, yy, rec);
+    const nutritionsum = {
+        calories: _.sum(foodsData.map((f) => parseInt(f.kalori))),
+        protein: _.sum(foodsData.map((f) => parseInt(f.protein))),
+        fat: _.sum(foodsData.map((f) => parseInt(f.lemak))),
+        carbs: _.sum(foodsData.map((f) => parseInt(f.karbohidrat)))
+    };
 
     if(ret.status=="error") {
         return res.status(400).send({success: false, message: ret.message});
     } else {
-        return res.status(200).send({success: true, message: ret.message, data: foodsData});
+        return res.status(200).send({success: true, message: ret.message, nutrition: nutritionsum,data: foodsData});
     }   
 });
 
