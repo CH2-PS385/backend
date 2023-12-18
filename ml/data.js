@@ -68,3 +68,17 @@ export const getAllergies = function (id, allergy) {
 export const getTypeFood = function (id) {
     return foods[id - 1].tipe;
 }
+
+export const getConsistentRandom5 = function (seed) {
+    const a = 1103515245;
+    const c = 12345;
+    const m = 2 ** 31;
+    let state = seed;
+    const indices = [];
+    for (let i = 0; i < 5; i++) {
+        state = (a * state + c) % m;
+        indices.push(Math.floor(state / m * foods.length));
+    }
+
+    return indices.map(i => foods[i]);
+}

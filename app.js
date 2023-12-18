@@ -214,6 +214,12 @@ app.post('/v1/setplanner', async (req,res) => {
     }   
 });
 
+app.get('/v1/random5', async (req, res) =>{
+    const seed = req.query.seed;
+    const items = data.getConsistentRandom5(seed);
+    return res.status(200).send({success: true, data: items}); 
+});
+
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
     console.log('Press Ctrl+C to quit.');
