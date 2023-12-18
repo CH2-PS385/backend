@@ -113,11 +113,7 @@ app.get('/v1/getuserinfo', async (req,res) => {
 
 app.post('/v1/updateuserinfo', async (req,res) => {
     const message = [];
-    const email = null ?? req.body.email;
-    const height = null ?? req.body.height;
-    const weight = null ?? req.body.weight;
-    const age = null ?? req.body.age;
-    const gender = null ?? req.body.gender;
+    const {email, height, weight, age, gender} = req.body;
     if(!email) message.push(`Missing parameter: email`);
     if(!height) message.push(`Missing parameter: height`);
     if(!weight) message.push(`Missing parameter: weight`);

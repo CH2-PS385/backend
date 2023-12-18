@@ -4,9 +4,8 @@ import { Timestamp } from "firebase-admin/firestore";
 const usersCollection = await db.collection('test_users');
 
 export const findUserbyEmail = async function (email) {
-    const res = await usersCollection.where('email','==',email).get();
-    // console.log(res.empty);
-    if(res.empty) return undefined;
+    const res = await usersCollection.doc(email).get(); 
+    if(!res.exists) return undefined;
     else return res; 
 } 
 
@@ -15,7 +14,7 @@ export const create_user = async function (email, name) {
         const userExist = await findUserbyEmail(email); 
         if(userExist) return ({ status:"error", message: "User already exist"});
 
-        const res = await usersCollection.add({
+        const res = await usersCollection.doc(email).set({
             name: name,
             email: email
         });
@@ -31,7 +30,7 @@ export const get_user = async function (email) {
     try {
         const userExist = await findUserbyEmail(email);
         if (userExist) {
-            const user = await userExist.docs[0];
+            const user = await userExist;
 
             return { status: "success", message: `Get user with email ${email} success. ID: ${user.id}`, data: user.data() };
         } else {
@@ -49,7 +48,7 @@ export const update_user = async function (email, object) {
         const userExist = await findUserbyEmail(email);
         
         if (userExist) {
-            const user = userExist.docs[0].ref;
+            const user = userExist.ref;
             await user.update(object);
             return { status: "success", message: `Updated user with email ${email}. ID: ${user.id}` };
         } else {
