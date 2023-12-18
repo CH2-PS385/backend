@@ -1,5 +1,5 @@
 import { db } from './main.js';
-import { Timestamp } from "firebase-admin/firestore";
+// import { Timestamp } from "firebase-admin/firestore";
 
 const usersCollection = await db.collection('test_users');
 
@@ -66,14 +66,18 @@ export const get_userinfo = async function (email) {
         height: user.height,
         weight: user.weight,
         age: user.age, 
-        gender: user.gender
+        gender: user.gender,
+        bmr: user.bmr
     };
 
     return {...res, data: userinfo};
 }
 
 export const update_userinfo = async function (email, height, weight, age, gender) {
-    return await update_user(email, {height, weight, age, gender});
+    let bmr = 10*weight + 6.25* height - 5 * age;
+    if(gender == 'm') bmr+=5;
+    else bmr-=161;
+    return await update_user(email, {height, weight, age, gender, bmr});
 }
 
 export const get_userallergies = async function (email) {
