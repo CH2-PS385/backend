@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import _ from 'lodash';
 import * as db_user from './firestore/user.js';
 import * as db_planner from './firestore/planner.js';
+import * as db_intake from './firestore/waterintake.js';
 
 
 const PORT = parseInt(process.env.PORT) || 8080;
@@ -215,9 +216,29 @@ app.post('/v1/setplanner', async (req,res) => {
 });
 
 app.get('/v1/random5', async (req, res) =>{
-    const seed = req.query.seed;
+    const seed = req.query.seed ?? 0;
     const items = data.getConsistentRandom5(seed);
     return res.status(200).send({success: true, data: items}); 
+});
+
+app.get('/v1/waterintake', async (req, res) => {
+    const date = new Date();
+    const { email, dd=date.getDate(), mm=date.getMonth()+1, yy=date.getFullYear() } = req.query;
+    if (!email) return res.status(400).send({ success: false, message: `Missing parameter: email` });
+
+    const tracker = await db_intake.get_intake(email, dd, mm, yy);
+    return res.status(200).send({ success: tracker.status=="error"?false:true, data: { intakes: tracker.array, sum: _.sum(tracker.array) }, tracker: tracker });
+});
+
+app.post('/v1/waterintake', async (req, res) =>{
+    const date = new Date();
+    const { email, dd=date.getDate(), mm=date.getMonth()+1, yy=date.getFullYear(), intake } = req.body;
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+    if(!intake) return res.status(400).send({success: false, message:`Missing parameter: intake`});
+    
+    const tracker = await db_intake.set_intake(email, dd, mm, yy, intake);
+    console.log(tracker);
+    return res.status(200).send({success: tracker.status=="error"?false:true, data: { intakes: tracker.array, sum: _.sum(tracker.array) }, tracker: tracker});
 });
 
 app.listen(PORT, () => {
