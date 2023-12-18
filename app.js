@@ -5,6 +5,7 @@ import 'dotenv/config'
 import bodyParser from 'body-parser';
 import _ from 'lodash';
 import * as db_user from './firestore/user.js';
+import * as db_planner from './firestore/planner.js';
 
 
 const PORT = parseInt(process.env.PORT) || 8080;
@@ -171,6 +172,45 @@ app.post('/v1/adduser', async (req,res) => {
         return res.status(400).send({success: false, message: user.message});
     } else {
         return res.status(200).send({success: true, message: user.message});
+    }   
+});
+
+
+app.get('/v1/getplanner', async (req,res) => {
+    const {email, dd, mm, yy} = req.query;
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+    if(!dd) return res.status(400).send({success: false, message:`Missing parameter: dd`});
+    if(!mm) return res.status(400).send({success: false, message:`Missing parameter: mm`});
+    if(!yy) return res.status(400).send({success: false, message:`Missing parameter: yy`});
+
+    const planner = await db_planner.get_planner(email, dd, mm, yy);
+    const foodsData = planner?.array?.map((val) =>({...data.getFoodbyId(val)[0]}));
+    // return res.status(400).send({test:"test", data:foodsData, planner:planner});
+    if(planner.status=="error") {
+        return res.status(400).send({success: false, isEmpty: true, message: planner.message});
+    } else {
+        return res.status(200).send({success: true, message: planner.message, isEmpty: planner.isEmpty, data: foodsData});
+    }  
+});
+
+app.post('/v1/setplanner', async (req,res) => {
+    const {email, dd, mm, yy} = req.body;
+    if(!email) return res.status(400).send({success: false, message:`Missing parameter: email`});
+    if(!dd) return res.status(400).send({success: false, message:`Missing parameter: dd`});
+    if(!mm) return res.status(400).send({success: false, message:`Missing parameter: mm`});
+    if(!yy) return res.status(400).send({success: false, message:`Missing parameter: yy`});
+
+    const user = await db_user.get_user(email);
+    let rec = await ml.recommendation(user.data.bmr, user.data.allergies);
+    rec = rec.slice(0,4);
+
+    const foodsData = rec.map((val) =>({...data.getFoodbyId(val)[0]}));
+    const ret = await db_planner.set_planner(email, dd, mm, yy, rec);
+
+    if(ret.status=="error") {
+        return res.status(400).send({success: false, message: ret.message});
+    } else {
+        return res.status(200).send({success: true, message: ret.message, data: foodsData});
     }   
 });
 
