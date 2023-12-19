@@ -147,7 +147,7 @@ app.get('/v1/getuserallergies', async (req,res) => {
 app.post('/v1/updateuserallergies', async (req,res) => {
     const message = [];
     const email = null ?? req.body.email;
-    const allergies = null ?? req.body.allergies;
+    const allergies = [] ?? req.body.allergies;
     if(!email) message.push(`Missing parameter: email`);
     if(!allergies || _.isEmpty(allergies)) message.push(`Missing parameter: allergies`);
     if(!_.isEmpty(message)) return res.status(400).send({success:false, message: message});
@@ -188,10 +188,10 @@ app.get('/v1/getplanner', async (req,res) => {
     const foodsData = planner?.array?.map((val) =>({...data.getFoodbyId(val)[0]}));
 
     const nutritionsum = {
-        calories: _.sum(foodsData.map((f) => parseInt(f.kalori))),
-        protein: _.sum(foodsData.map((f) => parseInt(f.protein))),
-        fat: _.sum(foodsData.map((f) => parseInt(f.lemak))),
-        carbs: _.sum(foodsData.map((f) => parseInt(f.karbohidrat)))
+        calories: _.sum(foodsData?.map((f) => parseInt(f.kalori))),
+        protein: _.sum(foodsData?.map((f) => parseInt(f.protein))),
+        fat: _.sum(foodsData?.map((f) => parseInt(f.lemak))),
+        carbs: _.sum(foodsData?.map((f) => parseInt(f.karbohidrat)))
     };
 
     if(planner.status=="error") {
@@ -215,10 +215,10 @@ app.post('/v1/setplanner', async (req,res) => {
     const foodsData = rec.map((val) =>({...data.getFoodbyId(val)[0]}));
     const ret = await db_planner.set_planner(email, dd, mm, yy, rec);
     const nutritionsum = {
-        calories: _.sum(foodsData.map((f) => parseInt(f.kalori))),
-        protein: _.sum(foodsData.map((f) => parseInt(f.protein))),
-        fat: _.sum(foodsData.map((f) => parseInt(f.lemak))),
-        carbs: _.sum(foodsData.map((f) => parseInt(f.karbohidrat)))
+        calories: _.sum(foodsData?.map((f) => parseInt(f.kalori))),
+        protein: _.sum(foodsData?.map((f) => parseInt(f.protein))),
+        fat: _.sum(foodsData?.map((f) => parseInt(f.lemak))),
+        carbs: _.sum(foodsData?.map((f) => parseInt(f.karbohidrat)))
     };
 
     if(ret.status=="error") {

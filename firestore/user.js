@@ -16,7 +16,8 @@ export const create_user = async function (email, name) {
 
         const res = await usersCollection.doc(email).set({
             name: name,
-            email: email
+            email: email,
+            allergies: []
         });
 
         console.log(`User with email ${email} added. ID: ${res.id}`);
