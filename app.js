@@ -147,9 +147,9 @@ app.get('/v1/getuserallergies', async (req,res) => {
 app.post('/v1/updateuserallergies', async (req,res) => {
     const message = [];
     const email = null ?? req.body.email;
-    const allergies = [] ?? req.body.allergies;
+    const allergies = req.body.allergies ?? [];
     if(!email) message.push(`Missing parameter: email`);
-    if(!allergies || _.isEmpty(allergies)) message.push(`Missing parameter: allergies`);
+    // if(!allergies || _.isEmpty(allergies)) message.push(`Missing parameter: allergies`);
     if(!_.isEmpty(message)) return res.status(400).send({success:false, message: message});
     
     
