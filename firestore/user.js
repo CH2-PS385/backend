@@ -1,7 +1,7 @@
 import { db } from './main.js';
 // import { Timestamp } from "firebase-admin/firestore";
 
-const usersCollection = await db.collection('test_users');
+const usersCollection = await db.collection('users');
 
 export const findUserbyEmail = async function (email) {
     const res = await usersCollection.doc(email).get(); 

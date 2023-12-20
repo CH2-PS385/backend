@@ -1,5 +1,5 @@
 import { db } from './main.js';
-const tracker = await db.collection('test_trackers');
+const tracker = await db.collection('trackers');
 
 export const get_intake = async function (email, dd, mm, yy) {
     try {

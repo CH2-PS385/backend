@@ -1,7 +1,7 @@
 import { db } from './main.js';
 // import { Timestamp } from "firebase-admin/firestore";
 
-const planner = await db.collection('test_planners');
+const planner = await db.collection('planners');
 
 export const set_planner = async function (email, dd, mm, yy, array) { // array of id
     
